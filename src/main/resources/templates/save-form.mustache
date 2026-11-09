@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>메시지 작성</title>
+    <style>
+        body { margin: 20px; font-family: Arial, sans-serif }
+        nav a { padding: 8px 15px; margin-right: 10px; background-color: #666; color: white; text-decoration: none; }
+        form { margin-top: 20px; }
+        input { padding: 8px; width: 300px; margin-right: 10px; }
+        button { padding: 8px 15px; background-color: #007bff; color: white; border: none }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">목록</a>
+        <a href="/save-form">작성</a>
+    </nav>
+
+    <h3>메시지 작성</h3>
+
+    <form action="/chat" method="post">
+        <input type="text" name="msg" id="msg" placeholder="메시지 입력" required autofocus>
+        <button type="submit">전송</button>
+    </form>
+
+    <script>
+        // 최신 메시지가 보이도록 스크롤을 맨 아래로 내림.
+        const chatArea = document.getElementById("chatArea");
+        // 스크롤의 시작 높이를 맨 아래로 설정 ()
+        // scrollHeight - 자신이 가지는 콘텐츠 전체 높이
+        chatArea.scrollTop = chatArea.scrollHeight;
+
+        // 폴링 - 페이지가 열리고 2초 뒤 페이지를 다시 불러온다.
+        setTimeout(() => location.reload(), 2000);
+    </script>
+</body>
+</html>
