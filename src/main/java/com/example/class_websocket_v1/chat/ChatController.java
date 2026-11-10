@@ -16,14 +16,13 @@ public class ChatController {
     // A. 채팅 목록 화면 (폴링)
     @GetMapping("/")
     public String index(Model model) {
-
+        model.addAttribute("chats", chatService.findAll());
         return "index";
     }
 
     // B. 채팅 작성 (폴링)
     @GetMapping("/save-form")
     public String saveForm(Model model) {
-
         return "save-form";
     }
 
