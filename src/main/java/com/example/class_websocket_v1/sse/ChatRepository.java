@@ -1,4 +1,4 @@
-package com.example.class_websocket_v1.chat;
+package com.example.class_websocket_v1.sse;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
