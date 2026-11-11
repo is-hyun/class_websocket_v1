@@ -1,4 +1,4 @@
-package com.example.class_websocket_v1.sse;
+package com.example.class_websocket_v1.websocket;
 
 import jakarta.persistence.*;
 import lombok.Builder;
