@@ -19,7 +19,7 @@ public class ChatController {
     // A. 채팅 목록 화면 (폴링)
     @GetMapping("/")
     public String index(Model model) {
-
+        model.addAttribute("chats", chatService.findAll());
         return "index";
     }
 
